@@ -3,12 +3,18 @@
 import { useEffect, useState } from "react";
 import Webcam from "react-webcam";
 function getWindowDimensions() {
-  // if (typeof window !== "undefined") {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
+  if (typeof window !== "undefined") {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  } else {
+    return {
+      width: 1280,
+      height: 720,
+    };
+  }
 }
 
 function useWindowDimensions() {
