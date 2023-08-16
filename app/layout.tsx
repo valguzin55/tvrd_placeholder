@@ -1,3 +1,4 @@
+import { TailwindIndicator } from "@/components/indicator";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -36,7 +37,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        {/* <TailwindIndicator /> */}
+      </body>
     </html>
   );
 }
