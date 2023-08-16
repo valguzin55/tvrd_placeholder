@@ -32,7 +32,7 @@ import Webcam from "react-webcam";
 //   }, []);
 
 //   return windowDimensions;
-}
+// }
 
 export default function WebcamImpl() {
   // const { height, width } = useWindowDimensions();
@@ -55,7 +55,7 @@ export default function WebcamImpl() {
         right: 0,
         height: "100vh",
         // width: "100%",
-        objectFit: "fill",
+        objectFit: "cover",
       }}
       //   width={height}
       // className="w-screen flex absolute h-screen"
