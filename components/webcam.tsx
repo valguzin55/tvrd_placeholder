@@ -54,7 +54,7 @@ export default function WebcamImpl() {
         overflow: "hidden",
         right: 0,
         height: "100vh",
-        // width: "100%",
+        width: "100%",
         objectFit: "cover",
       }}
       //   width={height}
