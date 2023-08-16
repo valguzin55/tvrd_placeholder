@@ -21,7 +21,7 @@ function useWindowDimensions() {
       setWindowDimensions(getWindowDimensions());
     }
 
-    window.addEventListener("resize", () => setTimeout(handleResize, 1000));
+    window.addEventListener("resize", () => setTimeout(handleResize, 10));
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -32,16 +32,19 @@ export default function WebcamImpl() {
   const { height, width } = useWindowDimensions();
 
   return (
-    <Webcam
-      //   height={width}
-      videoConstraints={{
-        width: width,
-        height: height,
-        facingMode: "user",
-      }}
-      screenshotFormat="image/jpeg"
-      //   width={height}
-      className="w-full h-full flex absolute top-0"
-    />
+    <div className="relative flex w-screen h-screen">
+      <Webcam
+        //   height={width}
+
+        videoConstraints={{
+          width: width,
+          height: height,
+          facingMode: "user",
+        }}
+        screenshotFormat="image/jpeg"
+        //   width={height}
+        className="w-full h-full flex absolute top-0"
+      />
+    </div>
   );
 }
